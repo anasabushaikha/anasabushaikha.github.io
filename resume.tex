@@ -1,0 +1,362 @@
+\documentclass[a4paper,11pt]{article}
+
+% Package imports
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\usepackage{fontawesome5}
+
+% Color definitions
+\definecolor{darkblue}{RGB}{25,72,112}
+\definecolor{customblue}{HTML}{1a4d7a}
+
+% Page layout
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.0cm, top=0.8cm, right=1.0cm, bottom=1cm}
+\setlength{\footskip}{5pt}
+
+% Hyperlink setup
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=darkblue,
+    filecolor=darkblue,
+    urlcolor=darkblue,
+}
+
+% Custom box settings
+\usepackage[most]{tcolorbox}
+\tcbset{
+    frame code={},
+    center title,
+    left=0pt,
+    right=0pt,
+    top=0pt,
+    bottom=0pt,
+    colback=gray!20,
+    colframe=white,
+    width=\dimexpr\textwidth\relax,
+    enlarge left by=-2mm,
+    boxsep=4pt,
+    arc=0pt,outer arc=0pt,
+}
+
+% URL style
+\urlstyle{same}
+
+% Text alignment
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries\color{customblue}
+}{}{0em}{}[\color{customblue}\titlerule \vspace{-7pt}]
+
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand{\labelitemii}{$\vcenter{\hbox{\tiny$\circ$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.5mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm,itemsep=0.5mm]}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+
+% Commands for icon sizing
+\newcommand{\socialicon}[1]{\raisebox{-0.05em}{\resizebox{!}{1em}{#1}}}
+
+% Font options
+\newcommand{\headerfontiii}{\fontfamily{ppl}\selectfont}
+
+\begin{document}
+\headerfontiii
+
+% Header
+\begin{center}
+    {\Huge\textbf{\color{customblue}Anas Abushaikha}}
+\end{center}
+\vspace{-7mm}
+
+\begin{center}
+    \small{Canadian Citizen | Ottawa, Ontario, Canada}
+\end{center}
+\vspace{-7mm}
+
+\begin{center}
+    \small{
+    +1 (613) 897-0248 | \href{mailto:anas.abushaikha@outlook.com}{anas.abushaikha@outlook.com}
+    }
+\end{center}
+\vspace{-7mm}
+
+\begin{center}
+    \small{
+    {\color{customblue}\socialicon{\faLinkedin}} \href{https://linkedin.com/in/anasabushaikha}{linkedin.com/in/anasabushaikha} | 
+    {\color{customblue}\socialicon{\faGithub}} \href{https://github.com/anasabushaikha}{github.com/anasabushaikha}
+    }
+\end{center}
+
+\vspace{-7mm}
+
+\section{Education}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Hon. B.Sc., Computer Science, AI/ML Stream, Minor in Statistics (Co-Op)}
+{Ottawa, ON}{Carleton University}
+{Sep 2022 -- Apr 2026}
+\resumeItemListStart
+\item CGPA: 11.6/12 (A+, 4.0/4.0) | Dean's Honour List (2022-2025) | Entrance Scholarship: \$16,000
+\resumeItemListEnd
+
+\resumeSubheading
+{B.Sc., Biomedical Science, French Stream}
+{Ottawa, ON}{University of Ottawa}
+{Sep 2021 -- Apr 2022}
+\resumeItemListStart
+\item Dean's Honour List (2021-2022) | GPA: 9.2/10 | Entrance Scholarship: \$5,000
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-5mm}
+
+\section{Professional Experience}
+\vspace{-0.4mm}
+  \resumeSubHeadingListStart
+
+  \resumeSubheading
+      {Solutions Engineer Intern (Full-Time)}{Kanata, ON}
+      {CENGN}{May 2026 -- Present}
+      \resumeItemListStart
+        \item Deploying and configuring bare-metal, virtualized, and containerized test-bed environments within CENGN's hybrid cloud Living Lab to support client validation and commercialization projects
+        \item Translating client technical requirements into infrastructure specifications and automation workflows, collaborating with the Solutions Engineering team to accelerate testing, demonstration, and adoption of emerging networking and cloud technologies
+      \resumeItemListEnd
+  
+  \resumeSubheading
+      {Data Scientist (Contract Part-Time)}{Kanata, ON}
+      {Ericsson}{Sep 2025 -- Apr 2026}
+      \resumeItemListStart
+        \item Worked as part of a team to develop an AI-powered chatbot for analytical queries, integrating multiple data sources and testing with AWS-hosted LLM models, improving query resolution efficiency for internal technical teams
+        \item Conducted data analysis on system-level issues impacting radio performance, enabling proactive fault prediction and reducing incident recurrence; collaborated with escalation task forces to decrease critical downtime by 17\%
+      \resumeItemListEnd 
+      
+  \resumeSubheading
+    {Network and Product Data Analyst (CO-OP Full-Time)}{Kanata, ON}
+    {Ericsson}{May 2024 -- Aug 2025}
+    \resumeItemListStart
+      \item Queried large internal databases using SQL and generated weekly analytical reports with Python (Pandas, NumPy), improving stakeholder decision-making speed and eliminating repetitive manual tasks
+      \item Translated complex data from varying sources into actionable recommendations for stakeholders by developing interactive dashboards and automating data analysis pipelines (Matplotlib, Seaborn), cutting manual effort by 40\%
+    \resumeItemListEnd
+    
+  \resumeSubHeadingListEnd
+
+
+\vspace{-5mm}
+
+\section{Teaching Assistance Experience}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+
+\resumeProject
+  {Teaching Assistant -- Database Management Systems (3rd Year)}
+  {Carleton University, School of Computer Science}
+  {Sep 2025 -- Apr 2026}
+  {Ottawa, ON}
+\resumeItemListStart
+  \item Guiding students in advanced database concepts including SQL optimization, transaction management, normalization theory, and NoSQL systems; providing comprehensive feedback on database design projects
+\resumeItemListEnd
+
+\resumeProject
+  {Teaching Assistant -- Software Engineering in C++ (2nd Year)}
+  {Carleton University, School of Computer Science}
+  {Jan 2024 -- Apr 2024}
+  {Ottawa, ON}
+\resumeItemListStart
+  \item Guided students in object-oriented programming principles (classes, inheritance, polymorphism, design patterns); conducted weekly office hours offering support on C++ assignments and helping students build robust, modular software systems
+\resumeItemListEnd
+
+\resumeProject
+  {Teaching Assistant -- Systems-Level Programming in C (2nd Year)}
+  {Carleton University, School of Computer Science}
+  {Sep 2023 -- Dec 2023}
+  {Ottawa, ON}
+\resumeItemListStart
+  \item Assisted students with systems programming concepts including multi-threading, multi-processing, dynamic memory allocation, and inter-process communication; hosted office hours for debugging support and conceptual clarification
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-5mm}
+
+\section{Research Experience}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+
+\resumeProject
+  {Honours Thesis: Workflow Recognition in Ophthalmological Surgeries with DL}
+  {Carleton University School of Computer Science \& Department of Data Science}
+  {Sep 2025 -- Apr 2026}
+  {Ottawa, ON}
+\resumeItemListStart
+  \item Conducting literature review on surgical workflow analysis using deep learning, focusing on time-series architectures (TCNs, LSTMs, Transformers) for automated phase classification in ophthalmological surgeries
+  \item Implementing and evaluating deep learning models for per-frame phase recognition and segmentation of cataract surgery videos to enable phase-specific workflow analysis and performance feedback for ophthalmology residents
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-5mm}
+
+\section{Honours, Awards \& Certifications}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+
+\resumeProject
+  {Top 3 Finish -- Hack the Hills 2024}
+  {Major League Hacking (MLH), University of Ottawa}
+  {}
+  {{}}
+\resumeItemListStart
+  \item Secured top 3 placement out of 36+ teams in 36-hour hackathon developing voice-activated AI calendar assistant as a chrome web extension
+\resumeItemListEnd
+
+\resumeProject
+  {DeepLearning.AI Certifications (11 courses completed)}
+  {Coursera}
+  {}
+  {{}}
+\resumeItemListStart
+  \item Neural Networks \& Deep Learning, CNNs in TensorFlow, AI for Medicine (Treatment/Diagnosis/Prognosis), Machine Learning Specialization, Advanced Learning Algorithms, Supervised/Unsupervised Learning
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-5mm}
+
+\section{Projects}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+
+\resumeProject
+  {AI Mock Interview Practice Platform}
+  {React, TypeScript, Node.js, Express, PostgreSQL, Gemini AI, OAuth}
+  {Jul 2025}
+  {{}[\href{https://github.com/jjudyyang/my-toolbox-ht6}{\color{customblue}\socialicon{\faGithub}}]}
+\resumeItemListStart
+  \item Developed full-stack AI-powered platform featuring resume-specific personalized mock interviews, real-time feedback generation, and progress tracking; implemented Gmail OAuth authentication, file upload for resume parsing, and dynamic form handling
+  \item Built scalable frontend architecture using Vite, Tailwind CSS, React Router, and Radix UI, delivering intuitive dashboard with real-time session creation and progress visualization
+\resumeItemListEnd
+
+\resumeProject
+  {Voice-Activated AI Calendar Assistant -- Chrome Extension (Top 3/36+ Teams)}
+  {OpenAI GPT-4o, React, Node.js, Express, PostgreSQL, Chrome Extension API}
+  {Sep 2024}
+  {{}[\href{https://github.com/anasabushaikha}{\color{customblue}\socialicon{\faGithub}}]}
+\resumeItemListStart
+  \item Collaborated in team of 4 to build voice-activated Chrome extension that tracks cloud-based calendars using natural language commands; integrated OpenAI API for voice recognition with React frontend and Node.js/PostgreSQL backend
+  \item Secured Top 3 finish at Major League Hacking's Hack the Hills by delivering fully functional prototype within 36 hours
+\resumeItemListEnd
+
+\resumeProject
+  {Local Pharmacy Website -- Healthcare Scheduling Platform}
+  {Cloudflare, Supabase, PostgreSQL, Resend, Brevo}
+  {}
+  {{}}
+\resumeItemListStart
+  \item Architected and deployed a highly scalable, secure web application using a modern serverless stack to support specialized healthcare scheduling; engineered an edge-network layer with Cloudflare for authoritative DNS routing, custom WAF policies, and global asset caching to ensure low-latency performance and robust DDoS mitigation
+  \item Built the core appointment booking engine on Supabase, leveraging managed PostgreSQL and row-level security (RLS) to handle concurrent scheduling states with strict data isolation; orchestrated event-driven transactional communications for booking confirmations via the Resend and Brevo APIs, decoupling high-deliverability notifications from frontend state for a resilient, high-availability architecture
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-5mm}
+
+\section{Technical Skills}
+\vspace{-0.4mm}
+ \resumeHeadingSkillStart
+  \resumeSubItem{Programming Languages:}
+    {Python, Java, C, C++, C\#, JavaScript, SQL, R, SAS, HTML, CSS}
+  \resumeSubItem{Machine Learning \& AI:}
+    {TensorFlow, PyTorch, scikit-learn, NumPy, Pandas}
+  \resumeSubItem{Web Development:}
+    {React, TypeScript, Node.js, Express.js, Vite, Tailwind CSS}
+  \resumeSubItem{Data \& Databases:}
+    {PostgreSQL, Matplotlib, Seaborn, Plotly, SQL Server, Database Design}
+  \resumeSubItem{Tools:}
+    {Git, Linux, Docker, Kubernetes, Statistical Analysis, Time Series Analysis}
+ \resumeHeadingSkillEnd
+\vspace{-5mm}
+
+\section{Additional Information}
+\vspace{-0.4mm}
+\small{
+\textbf{Languages:} French (Native), English (Native), Arabic (Native)
+
+\textbf{Interests:} Deep Learning, Computer Vision, Medical AI, Natural Language Processing, Time-Series Analysis, Surgical Workflow Analysis, Applied Machine Learning in Healthcare
+}
+\vspace{-2mm}
+
+\end{document}
