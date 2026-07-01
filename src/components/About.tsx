@@ -1,9 +1,6 @@
-import { motion } from "framer-motion";
 import { Languages, Heart } from "lucide-react";
-import { profile, stats } from "@/data/resume";
+import { profile } from "@/data/resume";
 import Reveal from "./Reveal";
-import Counter from "./Counter";
-import { stagger, fadeUp, viewportOnce } from "@/lib/motion";
 
 export default function About() {
   return (
@@ -16,8 +13,7 @@ export default function About() {
           </h2>
         </Reveal>
 
-        <div className="mt-14 grid lg:grid-cols-[1.3fr_1fr] gap-12">
-          <div>
+        <div className="mt-14 max-w-3xl">
             {profile.bio.map((p, i) => (
               <Reveal key={i} delay={i * 0.1}>
                 <p className="text-mist text-base sm:text-lg leading-relaxed mb-5">
@@ -63,29 +59,6 @@ export default function About() {
                 </div>
               </div>
             </Reveal>
-          </div>
-
-          <motion.div
-            variants={stagger(0.1)}
-            initial="hidden"
-            whileInView="show"
-            viewport={viewportOnce}
-            className="grid grid-cols-2 gap-4 content-start"
-          >
-            {stats.map((s) => (
-              <motion.div
-                key={s.label}
-                variants={fadeUp}
-                className="glass rounded-2xl p-5 hover:border-cyan/30 transition-colors"
-              >
-                <div className="font-display text-3xl sm:text-4xl font-bold text-gradient">
-                  <Counter value={s.value} />
-                </div>
-                <div className="mt-2 text-sm font-medium text-white">{s.label}</div>
-                <div className="mt-0.5 text-xs text-mist-dim">{s.sub}</div>
-              </motion.div>
-            ))}
-          </motion.div>
         </div>
       </div>
     </section>

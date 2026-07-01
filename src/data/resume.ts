@@ -36,13 +36,6 @@ export const profile = {
   ],
 };
 
-export const stats = [
-  { label: "CGPA", value: "11.6/12", sub: "A+ · 4.0/4.0" },
-  { label: "Downtime Reduced", value: "17%", sub: "Ericsson escalation task force" },
-  { label: "Manual Effort Cut", value: "40%", sub: "Automated analytics pipelines" },
-  { label: "Hackathon Placement", value: "Top 3", sub: "of 36+ teams, Hack the Hills 2024" },
-];
-
 export type Experience = {
   role: string;
   company: string;
