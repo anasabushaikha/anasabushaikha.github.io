@@ -49,7 +49,7 @@ export default function Hero() {
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
               </span>
               <span className="font-mono text-xs text-mist tracking-wide">
-                Currently @ CENGN — Solutions Engineer Intern
+                Carleton CS grad → MMath CS @ Waterloo · Computer Vision
               </span>
             </motion.div>
 
@@ -171,7 +171,7 @@ export default function Hero() {
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
                 className="absolute -left-6 top-8 glass rounded-xl px-3 py-2 font-mono text-xs text-mist shadow-xl hidden sm:block"
               >
-                🎓 Carleton CS
+                🎓 Waterloo MMath
               </motion.div>
               <motion.div
                 animate={{ y: [0, 10, 0] }}

@@ -16,7 +16,7 @@ export const profile = {
   tagline:
     "Applying deep learning to real problems — from predicting radio network faults to recognizing surgical workflow phases in the operating room.",
   bio: [
-    "I'm a Computer Science student at Carleton University (AI/ML stream, Statistics minor), currently working as a Solutions Engineer at CENGN and previously a Data Scientist at Ericsson, where I helped build AI-powered tools and reduced critical network downtime by 17%.",
+    "I'm a thesis-based MMath student in Computer Science at the University of Waterloo, working on computer vision, and a Computer Science graduate of Carleton University (AI/ML stream, Statistics minor). Before that I was a Data Scientist at Ericsson, where I helped build AI-powered tools and reduced critical network downtime by 17%.",
     "My research focuses on applying deep learning — TCNs, LSTMs, and Transformers — to workflow recognition in ophthalmological surgery, aiming to give surgeons and residents better feedback through automated phase classification.",
     "Outside of research, I build full-stack products end-to-end: from serverless healthcare scheduling platforms to AI-powered mock interview tools, usually shipping with React, TypeScript, and Python.",
   ],
@@ -46,17 +46,6 @@ export type Experience = {
 };
 
 export const experience: Experience[] = [
-  {
-    role: "Solutions Engineer Intern (Full-Time)",
-    company: "CENGN",
-    location: "Kanata, ON",
-    period: "May 2026 -- Present",
-    current: true,
-    bullets: [
-      "Deploying and configuring bare-metal, virtualized, and containerized test-bed environments within CENGN's hybrid cloud Living Lab to support client validation and commercialization projects",
-      "Translating client technical requirements into infrastructure specifications and automation workflows, collaborating with the Solutions Engineering team to accelerate testing, demonstration, and adoption of emerging networking and cloud technologies",
-    ],
-  },
   {
     role: "Data Scientist (Contract Part-Time)",
     company: "Ericsson",
@@ -185,6 +174,13 @@ export type EducationItem = {
 };
 
 export const education: EducationItem[] = [
+  {
+    degree: "MMath, Computer Science (Thesis)",
+    school: "University of Waterloo",
+    location: "Waterloo, ON",
+    period: "Sep 2026 -- Present",
+    details: "Thesis research in computer vision",
+  },
   {
     degree: "Hon. B.Sc., Computer Science, AI/ML Stream, Minor in Statistics (Co-Op)",
     school: "Carleton University",
